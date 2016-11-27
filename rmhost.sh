@@ -10,7 +10,7 @@ case $input in
         [y] | [Y] ) sed -i "" "/^[^[:digit:]]*$input[^[:digit:]]/d" ~/.ssh/known_hosts
                     echo "$input was removed from known hosts."
             ;;
-        * )   echo "Cancelled: IP was not removed"
+        * )   echo "Cancelled: host '$input' was not removed"
             ;;
     esac
 esac
